@@ -1,3 +1,14 @@
+@media (max-width:1100px){
+	.owl-carousel-zag{
+	font-size: 28px;
+	line-height:28px;
+	padding-top: 6%;
+	padding-bottom: 2%;
+	}
+	.owl-carousel-dop{
+	font-size: 14px;
+	}	
+}
 @media (max-width:991px){
 	.rect {
 		display:none;
