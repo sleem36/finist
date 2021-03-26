@@ -67,23 +67,16 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 					</li>								
 				</ul>
 				<div class="flex">
-					<button class="send-button">Свяжитесь с нами</button>
+					<button class="send-button">
+						<i class="fas fa-phone fa-flip-horizontal"></i>
+						<span>Свяжитесь с нами</span>
+					</button>
 					<div class="user-personal"><i class="fa fa-user-o" aria-hidden="true"></i></div>
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="mobile-header">
-		<div class="container">
-			<div class="mobile-container">
-				<div class="mobile-menu-button">
-				<span></span>
-				</div>
-				<div class="head-search">
-		  	</div>
-			</div>
-		</div>
-	</div>
+
 	<nav class="main-nav">
 			<div class="container">
 
@@ -195,7 +188,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 	</section>
 	<section class="container product">
 		<div class="fon-grey">
-			<div class="realiz white">продукция завода</div>
+			<div class="realiz white">каталог</div>
 			<div class="let12 pb50 white">Наш завод выпускает более 250 видов продукции для ресторанов</div>
 			<div class="product__long">
 				<div class="prod-left">	
@@ -212,7 +205,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 				</div>
 				<div class="prod-right prod-right-img"></div>
 			</div>
-			<div class="product-two flex">
+			<div class="owl-carousel product-two flex">
 				<div class="prod-all flex">
 					<div class="prod-up prod-right-img">
 						<img src="img/r1.jpg" alt="img">
@@ -296,7 +289,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 			</div>
 		</div>
 	</section>
-	<section class="container slide-project">
+	<section class="container slide-projects">
 		<div class="fon-grey">
 			<div class="realiz">отраслевые решения</div>
 			<div class="let12 pb50 w980">Наши специальные изделия и подборки оборудования, для решения специфических задач общепита</div>
@@ -344,7 +337,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 					<label class="realiz white">Ваш номер телефона
 					<input type="text" name="phone"></label>	
 					<label class="realiz white">Ваш Email
-					<input type="text" name="email"></label>	
+					<input type="text" class='tel' name="email"></label>	
 					<button class="send-more">Отправить заявку</button>		
 				</form>					
 			</div>	
@@ -432,7 +425,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 		</div>
 	</section>
 	<section class="container you-social">
-		<div class="fon-grey fon-grey-black">
+		<div class="fon-grey fon-grey-blacks">
 			<div class="realiz white">социальные сети</div>
 			<div class="let12 pb50 m990 white">Мы в эфире. Рассказываем о новостях компании, проектах и рынке</div>
 			<div class="string"></div>
@@ -473,7 +466,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 					<div class="let12">О компании</div>
 					<div class="padd__text">We are the leading firm by delivering quality and value to our clients. All our professionals have more than 5 years of legal experiences. We like what we do. We are the leading firm by delivering quality and value to our clients. All our professionals have more than 5 years of legal experiences. We like what we do. We are the leading firm by delivering quality and value to our clients. 
 					</div>
-					<button class="send-more">Подробнее</button>
+					<button class="send-more">Перейти к странице о компании</button>
 				</div>
 				<div class="about-company__block"></div>				
 		</div>
@@ -505,7 +498,7 @@ var wbcr_clearfy_async_links = {"wbcr_clearfy-font-awesome":"https:\/\/use.fonta
 	<footer>
 		<div class="container">
 		<div class="footer-top">
-			<div class="let12 pb50 white">ХОТИТЕ ЭКСКУРСИЮ НА ПРОИЗВОДСТВО?</div>
+			<div class="let12 pb50 white">Хотите экскурсию на производство?</div>
 			<div class="footer-contacts">Узнайте условия у нашего менеджера<br>
 					по телефону +7 (800) 550-92-89<br>
 					или через электронную почту sales@f-inox.ru
@@ -610,11 +603,35 @@ $('.owl-carousel_food').owlCarousel({
     },  
   autoplayTimeout: 1500  
 });
+
+
 </script>
 	<script src="js/mask.js"></script>
 	<script>
 		$(document).ready(function() {
-	           	$('.tel').mask("+7(999)999-99-99", {placeholder:"_"});
+	    $('.tel').mask("+7(999)999-99-99", {placeholder:"_"});
+
+	    w = $(window).width();
+	    if (w < 991) {
+				$('.product-two.flex').owlCarousel({
+				  loop: true,
+				   merge:true,
+				 // Автоматическое проигрывание
+				 // autoplay: false,
+				  nav: true,
+				  autoplayTimeout: 1500,  
+				  // Количество элементов 1
+				  items: 1 
+				});
+	    }
+ 
+    $(window).resize(function () {
+      w = $(window).width();
+      if (w < 991) {
+        
+      }
+    });
+
 	    });
 	</script>
 

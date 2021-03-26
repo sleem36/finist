@@ -317,6 +317,7 @@ color: #616267;
 background-color: #fff;
 display: flex;
 margin-bottom: 30px;	
+position: relative;
 }
 .prod-right{
 background-color: #E3DFDB;
@@ -671,6 +672,8 @@ align-self: flex-end;
 }
 .white-bagr{
 background-color: #fff; 	
+position: relative;
+flex-grow: 1;
 }
 .prod-lef__cat{
 background-color:	#FFE0D6;
@@ -681,6 +684,8 @@ font-size: 12px;
 margin-right: 10px;
 margin-right: 4px;
 padding: 0 2px;
+margin-bottom: 4px;
+white-space: nowrap;
 }
 .prod-lef__cat:hover{
 cursor: pointer;
@@ -690,8 +695,10 @@ margin-right: 0px;
 }
 .prod-all.flex{
 flex-flow: column;	
-width: 48.5%;
 margin-bottom: 30px;
+}
+.product-two .prod-all.flex{
+width: 48.5%;
 }
 .white-bagr .proj-zag{
 margin-top: 2px;
@@ -718,9 +725,10 @@ justify-content: space-between;
 flex-flow: wrap;
 }
 .product .proj-url{
-opacity: 0.9;	
+opacity: 1;
 white-space: nowrap;
 margin: 0;
+align-self: start;
 } 
 .prod-lef__union.flex{
 justify-content: space-between;	
@@ -841,4 +849,14 @@ footer .zag-menu{
 max-width: 200px;
 min-height: 72px;
 }
-
+.fon-grey-blacks {
+    background-color: #2E2E2E;
+    padding: 88px 95px 76px 95px;
+    margin-top: 30px;
+}
+.owl-carousel.product-two.flex {
+display: flex;
+}
+.prod-lef__union .flex{
+flex-flow: wrap;
+}
