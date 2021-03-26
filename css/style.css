@@ -514,11 +514,6 @@ display: flex;
 align-items: flex-end;
 padding: 32px 20px;
 }
-.build-project__double{
-background-image: url("../img/skin.png");
-background-repeat: no-repeat;	
-background-size: cover;
-}
 .build-project__double .fon-grey{
 width:50%;	
 }
@@ -831,5 +826,19 @@ max-width: 540px;
 }
 .send-more.blue{
 margin-top: 48px;	
+}
+.build-project__double{
+background-image: url("../img/skin.png");
+background-repeat: no-repeat;	
+background-size: cover;
+margin-bottom: 30px;
+}
+.build-project__double.soiskatel{
+background-image: url("../img/skin2.png");
+background-repeat: no-repeat;	
+}
+footer .zag-menu{
+max-width: 200px;
+min-height: 72px;
 }
 
